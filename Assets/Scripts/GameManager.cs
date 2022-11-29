@@ -18,9 +18,11 @@ public class GameManager : MonoBehaviour
     public bool isGameActive;
     [SerializeField] Material toastedMaterial;
 
+    //ENCAPSULATION
     public Material ToastedMaterial { get { return toastedMaterial; } }
 
     private ToasterMgr toasterScript;  //this is a clever shortcut to the script attached to the toaster object.
+    //ENCAPSULATION
     public ToasterMgr ToasterScript { get { return toasterScript; } }  //this is the public handle to the toaster script.
 
     private GameObject startBtn;
@@ -101,6 +103,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("difficulty needs to be an int greater than zero!");
         }
     }
+
+    //ABSTRACTION
     void DestroyPrefabsInScene(string tagName)
     {
         GameObject[] prefabs = GameObject.FindGameObjectsWithTag(tagName);
@@ -121,6 +125,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("slices.Count == " + plate_in_use.Length);
         }
     }
+
+    //ABSTRACTION
     public void ScorePoints(int newPoints)
     {
         if (newPoints >= 0)

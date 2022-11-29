@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//INHERITANCE
 public class WhiteScript : BreadScript
 {
+    //POLYMORPHISM
     protected override int PointScore()
     {
         return 1; //this is the lowest score you can get.
